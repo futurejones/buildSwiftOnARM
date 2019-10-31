@@ -4,10 +4,6 @@
 BRANCH=swift-5.1-branch
 TAG=swift-5.1.1-RELEASE
 
-echo "♻️  Resetting the repositories..."
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "[ -d '{}'/.git ] && echo ■ Cleaning '{}' && cd '{}' && git reset --hard HEAD && git clean -fd" \;
-echo "✳️  Switching all the repositories to ${BRANCH} @ ${TAG}..."
-./swift/utils/update-checkout --scheme ${BRANCH} --tag ${TAG}
 echo "✅ Applying the required cross-platform patches..."
 find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "[ -d '{}'.diffs ] && echo ■ Applying patches to '{}' && cd '{}'  && for f in ../'{}'.diffs/*.diff; do [ -e \"\$f\" ] || continue; patch -p1 < \"\$f\"; done;" \;
 
