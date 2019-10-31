@@ -21,6 +21,8 @@ do
 done 
 
 # Clone Swift and all the related projects
-git clone -b swift-5.1-branch https://github.com/apple/swift
-
-./swift/utils/update-checkout --clone
+git clone https://github.com/apple/swift
+cd swift
+git checkout swift-5.1.1-RELEASE
+cd -
+./swift/utils/update-checkout --clone --tag swift-5.1.1-RELEASE
