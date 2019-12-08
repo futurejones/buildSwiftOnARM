@@ -1,7 +1,7 @@
 #!/bin/bash
 . "$(dirname $0)/utils.sh"
 
-BRANCH=swift-5.2-branch
+BRANCH=swift-5.1-branch
 TAG=swift-5.1.2-RELEASE
 
 echo "✅ Applying the required cross-platform patches..."
