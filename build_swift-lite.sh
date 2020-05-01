@@ -2,8 +2,8 @@
 . "$(dirname $0)/utils.sh"
 
 REL=5.1.5
-INSTALL_DIR=`pwd`/install
-PACKAGE=`pwd`/swift-${REL}_${ARCH}.tgz
+INSTALL_DIR=/install
+PACKAGE=/output/swift-${REL}_${ARCH}.tgz
 
 
 rm -rf $INSTALL_DIR $PACKAGE
