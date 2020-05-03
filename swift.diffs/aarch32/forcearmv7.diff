@@ -8,7 +8,7 @@ index 2859677fac..b7d65c4f9a 100644
          """
          system = platform.system()
 -        machine = platform.machine()
-+        machine = "armv6l" #platform.machine()
++        machine = "armv7l" #platform.machine()
 
          if system == 'Linux':
              if machine == 'x86_64':
